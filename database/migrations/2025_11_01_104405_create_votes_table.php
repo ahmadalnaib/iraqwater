@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('votes', function (Blueprint $table) {
             $table->id();
             $table->string('choice');
+            $table->string('ip_address')->nullable();
+            $table->index('ip_address');
             $table->timestamps();
         });
     }
